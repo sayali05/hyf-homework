@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Payment Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>Payment Form</h1>
+			<h4>Faster checkout</h4>
+		</header>
+
+		<form action="" method="post">
+			<div class="wrapper">
+				<!-- order summary -->
+				<div class="order-summary">
+					<div class="order-title">
+						<h2>Order Summary</h2>
+					</div>
+					<div class="order-total">
+						<div class="order-total1">
+							<p>Total</p>
+							<span>$333/month</span>
+						</div>
+						<hr />
+						<div class="order-total2">
+							<p>Total</p>
+							<span>$100</span>
+						</div>
+					</div>
+				</div>
+				<!-- radio buttons -->
+				<h2 class="pay-title">Payment Method</h2>
+				<div class="payment-method">
+					<div class="select-box">
+						<label for="card">
+							<input type="radio" name="payment" id="card" checked />
+							<div class="card-type">
+								<img src="logo-cards.png" alt="credit-debit" class="cardlogo" />
+								<span>Credit/Debit</span>
+							</div>
+						</label>
+
+						<label for="paypal">
+							<input type="radio" name="payment" id="paypal" />
+							<div class="paypal-type">
+								<img src="paypal.png" alt="credit-debit" class="paypallogo" />
+								<span>Paypal</span>
+							</div>
+						</label>
+					</div>
+				</div>
+				<!-- card info -->
+				<h2 class="card-info-title">Card Info</h2>
+				<div class="card-info">
+					<div class="cardnum-box card-container">
+						<label for="numbers">Card Number</label>
+						<div class="numbers">
+							<input
+								type="text"
+								id="numbers"
+								maxlength="16"
+								placeholder="1234 1234 1234 1234"
+								required
+								pattern="[0-9\s]{13,19}"
+								maxlength="19"
+							/>
+							<i class="fa fa-question-circle"></i>
+						</div>
+					</div>
+					<div class="expirydate-box card-container">
+						<label for="expiry">Expiry Date</label>
+						<div class="expiry">
+							<input
+								type="text"
+								id="expiry"
+								maxlength="16"
+								placeholder="MM/YY"
+								required
+								pattern="(?:0[1-9]|1[0-2])/[0-9]{2}"
+							/>
+						</div>
+					</div>
+					<div class="cvv-box card-container">
+						<label for="cvv">Security Code</label>
+						<div class="cvv">
+							<input
+								type="number"
+								id="cvv"
+								maxlength="16"
+								placeholder="CVV"
+								required
+								max="999"
+								pattern="([0-9]|[0-9]|[0-9])"
+							/>
+							<i class="fa fa-question-circle"></i>
+						</div>
+					</div>
+				</div>
+				<div class="btn-submit">
+					<button type="submit" class="confirm-btn">Buy Now</button>
+					<a href="#">Need Help?</a>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
