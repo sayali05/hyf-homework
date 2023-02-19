@@ -1,1 +1,2 @@
 hello class 25!
+today is your first day with git
