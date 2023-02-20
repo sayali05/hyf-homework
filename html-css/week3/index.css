@@ -133,7 +133,7 @@ hr {
 	opacity: 0;
 }
 
-[type="radio"]:checked + div {
+[type="radio"]:checked + span {
 	outline: 4px solid #fe4e9b;
 }
 [type="radio"] + .card-type {
