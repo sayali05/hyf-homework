@@ -179,9 +179,6 @@ hr {
 .numbers input::placeholder {
 	width: 313px;
 	height: 38px;
-	left: 590px;
-	top: 757px;
-
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;
@@ -200,9 +197,6 @@ hr {
 .expiry input::placeholder {
 	width: 313px;
 	height: 38px;
-	left: 590px;
-	top: 757px;
-
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;
@@ -222,9 +216,6 @@ hr {
 .cvv input::placeholder {
 	width: 313px;
 	height: 38px;
-	left: 590px;
-	top: 757px;
-
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;
