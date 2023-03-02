@@ -40,34 +40,24 @@ const juliaHouse = {
 	house_cost: 1000000,
 };
 
-function calculateVolumeInMeters(width, height, depth) {
-	volumeInMeters = width * height * depth;
-	return volumeInMeters;
-}
+function calculateHousePrice(width, height, depth, gardensize) {
+	const volumeInMeters = width * height * depth;
 
-function calculateHousePrice(volumeInMeters, gardensize) {
-	housePrice = volumeInMeters * 2.5 * 1000 + gardensize * 300;
+	const housePrice = volumeInMeters * 2.5 * 1000 + gardensize * 300;
 	return housePrice;
 }
 
-let peterHouseVolume = calculateVolumeInMeters(
+let peterHousePrice = calculateHousePrice(
 	peterHouse.width,
 	peterHouse.height,
-	peterHouse.depth
-);
-let juliaHouseVolume = calculateVolumeInMeters(
-	juliaHouse.width,
-	juliaHouse.height,
-	juliaHouse.depth
-);
-
-let peterHousePrice = calculateHousePrice(
-	peterHouseVolume,
+	peterHouse.depth,
 	peterHouse.gardensize
 );
 
 let juliaHousePrice = calculateHousePrice(
-	juliaHouseVolume,
+	juliaHouse.width,
+	juliaHouse.height,
+	juliaHouse.depth,
 	juliaHouse.gardensize
 );
 
