@@ -40,26 +40,16 @@ const juliaHouse = {
 	house_cost: 1000000,
 };
 
-function calculateHousePrice(width, height, depth, gardensize) {
+function calculateHousePrice({ width, height, depth, gardensize }) {
 	const volumeInMeters = width * height * depth;
 
 	const housePrice = volumeInMeters * 2.5 * 1000 + gardensize * 300;
 	return housePrice;
 }
 
-let peterHousePrice = calculateHousePrice(
-	peterHouse.width,
-	peterHouse.height,
-	peterHouse.depth,
-	peterHouse.gardensize
-);
+let peterHousePrice = calculateHousePrice(peterHouse);
 
-let juliaHousePrice = calculateHousePrice(
-	juliaHouse.width,
-	juliaHouse.height,
-	juliaHouse.depth,
-	juliaHouse.gardensize
-);
+let juliaHousePrice = calculateHousePrice(juliaHouse);
 
 let peterFinalCost =
 	peterHousePrice < peterHouse.house_cost
