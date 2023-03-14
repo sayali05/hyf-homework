@@ -18,16 +18,16 @@ console.log(getFullname("", "", "", false));
 //End of Flight booking fullname function
 
 //Event application
+const weekdays = [
+	"Sunday",
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday",
+];
 function getEventWeekday(days) {
-	const weekdays = [
-		"Sunday",
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday",
-	];
 	const todaysDate = new Date();
 	let today = todaysDate.getDay();
 	//console.log("Today is the " + weekdays[day]);
@@ -35,7 +35,7 @@ function getEventWeekday(days) {
 	let eventDate = (today + days) % 7;
 	let eventweekday = weekdays[eventDate];
 	console.log(
-		`Today is ${weekdays[day]} and the event is in ${days} days. Therefore the event will be held on a ${eventweekday}.`
+		`Today is ${weekdays[today]} and the event is in ${days} days. Therefore the event will be held on a ${eventweekday}.`
 	);
 }
 
@@ -54,6 +54,14 @@ function getClothsBasedOnTempreture(tempreture) {
 	} else {
 		return "cotton  cloths";
 	}
+	// switch (tempreture) {
+	// 	case tempreture <= 10:
+	// 		return "winter jackets with thermal set";
+	// 		break;
+	// 	case tempreture > 10 && tempreture <= 25:
+	// 		return "woolen jackets";
+	// 		break;
+	// }
 }
 const clothesToWear = getClothsBasedOnTempreture(18);
 console.log(clothesToWear);
