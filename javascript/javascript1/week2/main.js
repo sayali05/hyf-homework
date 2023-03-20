@@ -1,15 +1,31 @@
 //Flight booking fullname function
 function getFullname(firstname, surname, gender, useFormalName) {
-	if (gender === "male" && useFormalName === true) {
-		return "Your client full name is Lord " + firstname + " " + surname;
-	} else if (gender === "female" && useFormalName === true) {
-		return "Your client full name is Queen " + firstname + " " + surname;
-	} else if (gender === "" && useFormalName === true) {
-		return "Your client full name is " + firstname + " " + surname;
-	} else {
-		return "Please provide valid information";
-	}
+	// if (gender === "male" && useFormalName === true) {
+	// 	return "Your client full name is Lord " + firstname + " " + surname;
+	// } else if (gender === "female" && useFormalName === true) {
+	// 	return "Your client full name is Queen " + firstname + " " + surname;
+	// } else if (gender === "" && useFormalName === true) {
+	// 	return "Your client full name is " + firstname + " " + surname;
+	// } else {
+	// 	return "Please provide valid information";
+	// }
+
+	let genderTitle = "";
+
+	genderTitle =
+		gender === "male"
+			? "lord"
+			: gender === "female"
+			? "queen"
+			: gender === "" && firstname !== ""
+			? ""
+			: gender === "" && firstname === ""
+			? "not given"
+			: "Please provide valid information";
+
+	return `Your client full name is ${genderTitle} ${firstname} ${surname}`;
 }
+
 console.log(getFullname("Joy", "Kumar", "male", true));
 console.log(getFullname("Riya", "Kumari", "female", true));
 console.log(getFullname("Oscar", "Roy", "", true));
