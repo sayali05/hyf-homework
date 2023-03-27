@@ -4,7 +4,6 @@ let todoList = [];
 
 function getReply(command) {
 	const options = {
-		// weekday: "long",
 		year: "numeric",
 		month: "long",
 	};
