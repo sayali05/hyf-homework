@@ -24,7 +24,7 @@ function getReply(command) {
 		personName === ""
 	) {
 		personName = text.split(" ").pop();
-		//console.log("name=" + personName);
+
 		response = `Nice to meet you ${personName}`;
 	} else if (text.includes("hello my name is") && personName != "") {
 		response = `${personName} Hi again!`;
