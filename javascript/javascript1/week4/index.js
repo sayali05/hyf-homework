@@ -1,4 +1,4 @@
-//Voice assistant
+//Voice assistant code
 let personName = "";
 let todoList = [];
 
