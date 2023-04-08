@@ -31,7 +31,7 @@ for (const radioButton of radioButtons) {
 	radioButton.addEventListener("change", function () {
 		const value = radioButton.value;
 
-		if (value === "click") {
+		/*if (value === "click") {
 			getAnimalNameBtn.addEventListener("click", getAnimalName);
 			animalName.removeEventListener("mousehover", getAnimalName);
 			animalName.removeEventListener("keyup", getAnimalName);
@@ -43,6 +43,24 @@ for (const radioButton of radioButtons) {
 			animalName.addEventListener("keyup", getAnimalName);
 			animalName.removeEventListener("mouseover", getAnimalName);
 			getAnimalNameBtn.removeEventListener("click", getAnimalName);
+		}*/
+
+		switch (value) {
+			case "click":
+				getAnimalNameBtn.addEventListener("click", getAnimalName);
+				animalName.removeEventListener("mousehover", getAnimalName);
+				animalName.removeEventListener("keyup", getAnimalName);
+				break;
+			case "hover":
+				animalName.addEventListener("mouseover", getAnimalName);
+				getAnimalNameBtn.removeEventListener("click", getAnimalName);
+				animalName.removeEventListener("keyup", getAnimalName);
+				break;
+			case "keyup":
+				animalName.addEventListener("keyup", getAnimalName);
+				animalName.removeEventListener("mouseover", getAnimalName);
+				getAnimalNameBtn.removeEventListener("click", getAnimalName);
+				break;
 		}
 	});
 }
