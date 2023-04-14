@@ -48,17 +48,9 @@ const productSearchTag = document.getElementById("search-input");
 const maxPriceTag = document.getElementById("priceSearch");
 const sortOption = document.getElementById("sortSearch");
 
-productSearchTag.addEventListener("input", () => {
-	renderFilterProducts();
-});
-
-maxPriceTag.addEventListener("input", () => {
-	renderFilterProducts();
-});
-
-sortOption.addEventListener("change", () => {
-	renderFilterProducts();
-});
+productSearchTag.addEventListener("input", renderFilterProducts);
+maxPriceTag.addEventListener("input", renderFilterProducts);
+sortOption.addEventListener("change", renderFilterProducts);
 
 function renderFilterProducts() {
 	const productSearchValue = productSearchTag.value.trim();
