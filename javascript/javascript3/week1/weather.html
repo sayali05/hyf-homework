@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="weather.css" />
+		<title>Weather APP</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header><i class="bx bx-left-arrow-alt"></i>Weather App</header>
+			<section class="input-part">
+				<p class="info-txt"></p>
+				<div class="content">
+					<input
+						type="text"
+						spellcheck="false"
+						id="city-name"
+						placeholder="Enter city name"
+						required
+					/>
+					<button type="button" id="weather">Get Weather</button>
+					<div class="separator"></div>
+					<button id="get-location">Get Your Location</button>
+				</div>
+			</section>
+			<section class="weather-part">
+				<div>
+					<p id="tempreture"></p>
+					<p id="city"></p>
+					<img id="icon" />
+					<p id="description"></p>
+					<p id="cloud"></p>
+					<p id="feels-like"></p>
+					<p id="wind-speed"></p>
+					<p id="sunrise"></p>
+					<p id="sunset"></p>
+				</div>
+			</section>
+		</div>
+		<script src="weather.js"></script>
+	</body>
+</html>
